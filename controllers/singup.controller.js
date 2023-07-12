@@ -5,7 +5,6 @@ class SignUpController {
 
   createUser = async (req, res) => {
     const { email, password, confirm, nickname, description } = req.body;
-    console.log(req.body)
     try {
       const createUserOne = await this.signUpService.createUser({
         email,
